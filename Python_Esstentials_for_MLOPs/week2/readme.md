@@ -51,7 +51,7 @@ output -> 16
 def greeting(full_name="john doe"):
     print("Greeting ", full_name)
 
-greeting()
+greeting() <br>
 greeting("Superman!")
 ```
 output ->
