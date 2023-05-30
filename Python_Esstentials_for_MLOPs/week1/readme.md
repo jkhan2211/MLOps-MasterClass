@@ -1,5 +1,3 @@
-# Text Here
-
 # Week 1
 
 1- Working with Variables and Types
