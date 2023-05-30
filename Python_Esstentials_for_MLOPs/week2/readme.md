@@ -51,11 +51,11 @@ output -> 16
 def greeting(full_name="john doe"):
     print("Greeting ", full_name)
 
-greeting() <br>
+greeting()
 greeting("Superman!")
 ```
 output ->
-Greeting john doe
+Greeting john doe <br>
 Greeting Superman!
 
 
