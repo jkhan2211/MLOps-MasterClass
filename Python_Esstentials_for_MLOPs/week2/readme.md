@@ -69,3 +69,30 @@ output -> Greeting Sr. Jenkins
 
 ### Variable arguments and keyword arguments
 
+#### this function can take 0 or more arguments
+
+```
+def family_members(*args):
+    for name in args:
+        print(name)
+
+family_members("Lucy", "Matt", "Bob")
+```
+
+Output ->
+
+Lucy
+Matt
+Bob
+
+#### define a function that takes 0 or more keyword arguments
+```
+def stats(**kwargs):
+    # kwargs is now a dictionary
+    for key, value in kwargs.items():
+        print(key, "--->", value)
+
+stats(quick="slow", active=False, weight=210)
+```
+
+
