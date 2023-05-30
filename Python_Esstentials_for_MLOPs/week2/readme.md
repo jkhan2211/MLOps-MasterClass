@@ -3,10 +3,10 @@
 #### Structure and Value
 
 ###### basic function with no argument
-
+```
 def simple():
     print("this is a function")
-
+```
 ###### calling function
 simple()
 
