@@ -95,4 +95,180 @@ def stats(**kwargs):
 stats(quick="slow", active=False, weight=210)
 ```
 
+## Introduction to Class
 
+#### the most basic class
+```
+class Basic:
+    pass
+basic = Basic()
+```
+
+### use dir() to find about what is available in class
+```
+dir(basic)
+```
+
+#### class in general are good when grouping code and behaviour 
+
+```
+class Dog():
+    is_animal = True
+
+    def bark(self):
+        print("woof")
+dog = Dog()
+
+dog.bark()
+dog.is_animal
+```
+
+#### you can create many instances
+ruful = Dog()
+ruful.bark()
+
+### class attri
+Dog.is_animal = False
+print("Is ruful an animal", ruful.is_animal)
+
+
+##### What is self? 
+
+pass self statement in the method
+
+### Using a constructor
+##### The constructor in python is with __init__
+
+```
+class Dog:
+    def __init__(self):
+        self.is_animal = True
+
+dog = Dog()
+dog.is_animal
+
+```
+
+#### two instances variables are only for the object and you can't affect other objects
+
+```
+ruful = Dog()
+sparky = Dog()
+
+print("Ruful is an animal?", ruful.is_animal())
+print("Sparky is an animal?", sparky.is_animal())
+
+```
+
+output ->
+Ruful is an animal? True
+Sparky is an animal? True
+
+
+### State
+##### pass arguments, keywords argument to a class
+
+```
+
+class Animal():
+    def __init__(self, name, legs=4, barks=True):
+        self.name = name
+        self.legs = legs
+        self.barks = barks
+
+    def info(self):
+        print(f"This is an animal {self.name}, has {self.legs} legs")
+        if barks:
+            print("Add this bark here")
+        else:
+            print("No bark")
+            
+bunny = Animal("buster", barks=False)
+bunny.info()
+
+print(bunny.name)
+print(bunny.legs)
+print(bunny.barks)
+
+```
+output ->
+buster
+4
+False
+
+
+### Adding Methods
+
+### class with two methods
+```
+class Budget():
+    def __init__(self, budget):
+        self.budget = budget
+    
+    def expense(self, amount):
+        self.budget = self.budget - amount
+        print(f"Budget left: {self.budget} ")
+
+    def report(self, currency="$"):
+        print(f"Budget is: {currency}{self.budget}")
+april_budget = Budget(100)
+april_budget.expense(34)
+```
+
+### Class Inheritance
+
+##### create a base class
+```
+class Pet:
+    def eat(self):
+        self.found = self.food - self.appetite
+        print(f"Ate {self.appetite} of food, have {self.food} left")
+
+```
+##### create a child class for other house pets 
+```
+class Parakeet(Pet):
+    def __init__(self):
+        self.food = 100
+        self.appetite = 1
+
+class Dog(Pet):
+    def __init__(self):
+        self.food = 100
+        self.appetite = 2
+
+perry = Parakeet()
+rufus = Dog()
+```
+output ->
+Ate 1 of food, have 99 left
+Ate 2 of food, have 98 left
+
+
+#### Demo other classes have method
+```
+for attribute in dir(rufus):
+    if attribute.startswith('_'):
+        continue
+    print(attribute)
+    
+```
+output ->
+appetite
+eat
+food
+
+#### Use of unittest
+```
+import unittest
+
+class Testing(unittest.Test(case)):
+    pass
+test = Testing()
+
+
+for attribute in dir(test):
+    if attribute.startswith('_'):
+        continue
+    print(attribute)
+```
