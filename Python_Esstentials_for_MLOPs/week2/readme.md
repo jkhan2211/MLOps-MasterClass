@@ -81,8 +81,8 @@ family_members("Lucy", "Matt", "Bob")
 
 Output ->
 
-Lucy
-Matt
+Lucy <br>
+Matt <br>
 Bob
 
 #### define a function that takes 0 or more keyword arguments
@@ -161,7 +161,7 @@ print("Sparky is an animal?", sparky.is_animal())
 ```
 
 output ->
-Ruful is an animal? True
+Ruful is an animal? True <br>
 Sparky is an animal? True
 
 
@@ -241,7 +241,7 @@ perry = Parakeet()
 rufus = Dog()
 ```
 output ->
-Ate 1 of food, have 99 left
+Ate 1 of food, have 99 left <br>
 Ate 2 of food, have 98 left
 
 
@@ -254,8 +254,8 @@ for attribute in dir(rufus):
     
 ```
 output ->
-appetite
-eat
+appetite <br>
+eat <br>
 food
 
 #### Use of unittest
