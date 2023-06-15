@@ -272,3 +272,49 @@ for attribute in dir(test):
         continue
     print(attribute)
 ```
+
+#### Python Modules 
+- a py file where one can put functions
+
+```
+import os
+
+dir(os)
+```
+
+### Working with imports
+
+```
+import util
+
+dir(util)
+
+utils.str_to_bool("yes")
+```
+- List out whats available in util 
+
+```
+from utils import str_to_int, str_to_bool
+
+print(str_to_int("1"))
+```
+
+### Working with python script
+
+```
+import sys
+
+def main(arguments):
+    print("This is the main function and has access to following variables)
+    for argument in arguments:
+        print(arguments)
+
+if __name__ == '__main__':
+    main(sys.argv)
+```
+
+#### Virtual Environment and Dependencies
+
+```
+python3 -m venv venv
+```
